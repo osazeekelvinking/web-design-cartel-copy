@@ -1,54 +1,70 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <!-- Custom Tracking Scripts -->
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<!-- Custom Tracking Scripts -->
+
+<!-- FunnelCraft AI Dependencies -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&family=Bebas+Neue&family=Oswald:wght@400;700&family=Lora:wght@400;700&family=Raleway:wght@400;700&family=Poppins:wght@400;700&family=Lato:wght@400;700&family=Cinzel:wght@400;700&family=Merriweather:wght@400;700&family=Pacifico&family=Outfit:wght@400;700&family=Kanit:wght@400;700&family=Righteous&family=Dancing+Script:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Anton&family=Josefin+Sans:wght@400;700&family=Caveat:wght@400;700&family=Fira+Sans:wght@400;700&family=Quicksand:wght@400;700&family=Abril+Fatface&family=Lobster&family=Patrick+Hand&family=Comfortaa:wght@400;700&family=Unbounded:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+  /* Hide horizontal overflow without breaking sticky positioning */
+  html, body { overflow-x: clip; }
+</style>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          indigo: { 50: '#f5f7ff', 100: '#ebf0ff', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca', 900: '#312e81' },
+          slate: { 850: '#111827', 950: '#020617' }
+        }
+      }
+    }
+  }
+</script>
 </head>
 <body class="bg-white text-slate-900">
-    <section id="navigation">
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
-    #main-nav { font-family: 'Montserrat', sans-serif; }
+
+<!-- Navigation -->
+<div id="navigation" class="scroll-mt-20"><style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 </style>
 
-<nav id="main-nav" class="sticky top-0 z-[100] w-full bg-zinc-950/90 backdrop-blur-md border-b border-white/10 transition-all duration-300">
+<nav id="main-nav" class="sticky top-0 z-[100] w-full bg-zinc-950/80 backdrop-blur-xl border-b border-white/10 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-20">
+        <div class="flex items-center justify-between h-20 md:h-24">
             
             <!-- Logo Area -->
             <div class="flex-shrink-0 flex items-center">
                 <a href="#" class="flex items-center">
-                    <img class="w-[130px] md:w-[160px] lg:w-[190px] h-auto" src="https://flyingtemplates.com/wp-content/uploads/2026/03/funnelcraftai-logo-white.svg" alt="FunnelCraft AI Logo">
+                    <img class="w-[130px] md:w-[170px] h-auto" src="https://flyingtemplates.com/wp-content/uploads/2026/03/funnelcraftai-logo-white.svg" alt="FunnelCraft AI Logo">
                 </a>
             </div>
 
-            <!-- Desktop Navigation Links (Hidden on Mobile/Tablet < 1024px) -->
-            <div class="hidden lg:flex items-center space-x-8">
-                <a href="#problem" class="text-[13px] font-bold text-zinc-400 hover:text-amber-500 transition-all duration-300 uppercase tracking-widest">The Struggle</a>
-                <a href="#solution" class="text-[13px] font-bold text-zinc-400 hover:text-amber-500 transition-all duration-300 uppercase tracking-widest">The Method</a>
-                <a href="#about" class="text-[13px] font-bold text-zinc-400 hover:text-amber-500 transition-all duration-300 uppercase tracking-widest">About Osazee</a>
+            <!-- Desktop Navigation Links (Hidden on Mobile/Tablet based on link count) -->
+            <div class="hidden lg:flex items-center space-x-10">
+                <a href="#problem" class="text-[11px] font-bold text-zinc-400 hover:text-amber-500 transition-all duration-300 uppercase tracking-[0.2em] font-['Montserrat']">The Struggle</a>
+                <a href="#solution" class="text-[11px] font-bold text-zinc-400 hover:text-amber-500 transition-all duration-300 uppercase tracking-[0.2em] font-['Montserrat']">The Method</a>
+                <a href="#about" class="text-[11px] font-bold text-zinc-400 hover:text-amber-500 transition-all duration-300 uppercase tracking-[0.2em] font-['Montserrat']">About Osazee</a>
             </div>
 
             <!-- Right Side: CTA + Mobile Toggle -->
-            <div class="flex items-center gap-3 md:gap-6">
-                <!-- Primary CTA Button -->
-                <a href="#" class="inline-flex items-center justify-center px-5 py-2.5 md:px-7 md:py-3 text-[11px] md:text-xs font-black text-black bg-gradient-to-r from-amber-400 to-orange-500 rounded-full uppercase tracking-widest hover:scale-105 hover:shadow-[0_0_25px_rgba(245,158,11,0.4)] transition-all duration-300 whitespace-nowrap">
+            <div class="flex items-center gap-3 md:gap-5">
+                <!-- Primary CTA Button (Locked to same line as logo) -->
+                <a href="#" class="inline-flex items-center justify-center px-4 py-2.5 md:px-8 md:py-3.5 text-[10px] md:text-xs font-black text-black bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500 rounded-full uppercase tracking-widest hover:scale-105 hover:shadow-[0_0_30px_rgba(245,158,11,0.3)] transition-all duration-500 whitespace-nowrap font-['Montserrat']">
                     Get Blueprint
                 </a>
 
                 <!-- Hamburger Menu Icon (Checkbox Hack) -->
                 <div class="lg:hidden flex items-center">
-                    <label for="nav-menu-toggle" class="cursor-pointer text-zinc-400 hover:text-amber-500 transition-colors p-1">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <label for="nav-menu-toggle" class="cursor-pointer text-zinc-400 hover:text-amber-500 transition-colors p-2">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                         </svg>
                     </label>
@@ -59,18 +75,17 @@
 
     <!-- Mobile Menu Dropdown (Checkbox Hack) -->
     <input type="checkbox" id="nav-menu-toggle" class="hidden peer">
-    <div class="max-h-0 overflow-hidden peer-checked:max-h-[300px] lg:hidden absolute top-full left-0 w-full bg-zinc-950/95 border-b border-white/10 transition-all duration-500 ease-in-out">
-        <div class="px-6 py-10 space-y-8 flex flex-col items-center text-center">
-            <a href="#problem" class="block text-xl font-extrabold text-zinc-300 hover:text-amber-500 transition-colors uppercase tracking-widest">The Struggle</a>
-            <a href="#solution" class="block text-xl font-extrabold text-zinc-300 hover:text-amber-500 transition-colors uppercase tracking-widest">The Method</a>
-            <a href="#about" class="block text-xl font-extrabold text-zinc-300 hover:text-amber-500 transition-colors uppercase tracking-widest">About Osazee</a>
+    <div class="max-h-0 overflow-hidden peer-checked:max-h-[400px] lg:hidden absolute top-full left-0 w-full bg-zinc-950/98 backdrop-blur-2xl border-b border-white/10 transition-all duration-500 ease-in-out">
+        <div class="px-8 py-12 space-y-8 flex flex-col items-center text-center">
+            <a href="#problem" class="block text-lg font-black text-zinc-300 hover:text-amber-500 transition-colors uppercase tracking-[0.2em] font-['Montserrat']">The Struggle</a>
+            <a href="#solution" class="block text-lg font-black text-zinc-300 hover:text-amber-500 transition-colors uppercase tracking-[0.2em] font-['Montserrat']">The Method</a>
+            <a href="#about" class="block text-lg font-black text-zinc-300 hover:text-amber-500 transition-colors uppercase tracking-[0.2em] font-['Montserrat']">About Osazee</a>
         </div>
     </div>
-</nav>
-</section>
+</nav></div>
 
-<section id="signature-hero">
-<section id="hero" class="relative bg-black pt-16 pb-24 overflow-hidden">
+<!-- Signature Hero -->
+<div id="signature-hero" class="scroll-mt-20"><section id="hero" class="relative bg-black pt-16 pb-24 overflow-hidden">
     <!-- Decorative background elements -->
     <div class="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-[120px]"></div>
     <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-600/10 rounded-full blur-[120px]"></div>
@@ -115,11 +130,10 @@
 
         </div>
     </div>
-</section>
-</section>
+</section></div>
 
-<section id="social-proof-authority">
-<section id="proof" class="py-20 bg-zinc-950 border-y border-zinc-900">
+<!-- Social Proof / Authority -->
+<div id="social-proof--authority" class="scroll-mt-20"><section id="proof" class="py-20 bg-zinc-950 border-y border-zinc-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
             <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Real Results From Real Nigerians</h2>
@@ -144,11 +158,10 @@
             </div>
         </div>
     </div>
-</section>
-</section>
+</section></div>
 
-<section id="dedicated-opt-in">
-<section id="optin" class="py-24 bg-black relative">
+<!-- Dedicated Opt-in -->
+<div id="dedicated-opt-in" class="scroll-mt-20"><section id="optin" class="py-24 bg-black relative">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-gradient-to-b from-zinc-900 to-black p-8 md:p-16 rounded-[3rem] border border-amber-500/20 shadow-[0_20px_50px_rgba(0,0,0,0.5)] text-center relative overflow-hidden">
             <!-- Background Glow -->
@@ -178,11 +191,10 @@
             </div>
         </div>
     </div>
-</section>
-</section>
+</section></div>
 
-<section id="problem-solution">
-<section id="problem" class="py-24 bg-zinc-950">
+<!-- Problem / Solution -->
+<div id="problem--solution" class="scroll-mt-20"><section id="problem" class="py-24 bg-zinc-950">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             
@@ -234,11 +246,10 @@
 
         </div>
     </div>
-</section>
-</section>
+</section></div>
 
-<section id="about-the-author">
-<section id="about" class="py-24 bg-black">
+<!-- About the Author -->
+<div id="about-the-author" class="scroll-mt-20"><section id="about" class="py-24 bg-black">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row items-center gap-16">
             <!-- Author Image -->
@@ -267,11 +278,10 @@
             </div>
         </div>
     </div>
-</section>
-</section>
+</section></div>
 
-<section id="final-cta">
-<section id="final-cta" class="py-24 bg-zinc-950 relative overflow-hidden">
+<!-- Final CTA -->
+<div id="final-cta" class="scroll-mt-20"><section id="final-cta" class="py-24 bg-zinc-950 relative overflow-hidden">
     <!-- Background Accents -->
     <div class="absolute top-0 right-0 w-1/2 h-full bg-amber-500/5 skew-x-12 transform origin-bottom"></div>
     
@@ -295,11 +305,10 @@
             Time is running out. Secure your spot in the Cartel today.
         </p>
     </div>
-</section>
-</section>
+</section></div>
 
-<section id="signature-footer">
-<footer class="bg-black py-12 border-t border-zinc-900">
+<!-- Signature Footer -->
+<div id="signature-footer" class="scroll-mt-20"><footer class="bg-black py-12 border-t border-zinc-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row justify-between items-center gap-8">
             <!-- Brand -->
@@ -333,7 +342,7 @@
             </p>
         </div>
     </div>
-</footer>
-</section>
+</footer></div>
+
 </body>
 </html>
