@@ -16,39 +16,38 @@
 <body class="bg-white text-slate-900">
     <section id="navigation">
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
-    #main-nav { font-family: 'Montserrat', sans-serif; }
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 </style>
 
-<nav id="main-nav" class="sticky top-0 z-[100] w-full bg-zinc-950/90 backdrop-blur-md border-b border-white/10 transition-all duration-300">
+<nav id="main-nav" class="sticky top-0 z-[100] w-full bg-zinc-950/80 backdrop-blur-xl border-b border-white/10 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-20">
+        <div class="flex items-center justify-between h-20 md:h-24">
             
             <!-- Logo Area -->
             <div class="flex-shrink-0 flex items-center">
                 <a href="#" class="flex items-center">
-                    <img class="w-[130px] md:w-[160px] lg:w-[190px] h-auto" src="https://flyingtemplates.com/wp-content/uploads/2026/03/funnelcraftai-logo-white.svg" alt="FunnelCraft AI Logo">
+                    <img class="w-[130px] md:w-[170px] h-auto" src="https://flyingtemplates.com/wp-content/uploads/2026/03/funnelcraftai-logo-white.svg" alt="FunnelCraft AI Logo">
                 </a>
             </div>
 
-            <!-- Desktop Navigation Links (Hidden on Mobile/Tablet < 1024px) -->
-            <div class="hidden lg:flex items-center space-x-8">
-                <a href="#problem" class="text-[13px] font-bold text-zinc-400 hover:text-amber-500 transition-all duration-300 uppercase tracking-widest">The Struggle</a>
-                <a href="#solution" class="text-[13px] font-bold text-zinc-400 hover:text-amber-500 transition-all duration-300 uppercase tracking-widest">The Method</a>
-                <a href="#about" class="text-[13px] font-bold text-zinc-400 hover:text-amber-500 transition-all duration-300 uppercase tracking-widest">About Osazee</a>
+            <!-- Desktop Navigation Links (Hidden on Mobile/Tablet based on link count) -->
+            <div class="hidden lg:flex items-center space-x-10">
+                <a href="#problem" class="text-[11px] font-bold text-zinc-400 hover:text-amber-500 transition-all duration-300 uppercase tracking-[0.2em] font-['Montserrat']">The Struggle</a>
+                <a href="#solution" class="text-[11px] font-bold text-zinc-400 hover:text-amber-500 transition-all duration-300 uppercase tracking-[0.2em] font-['Montserrat']">The Method</a>
+                <a href="#about" class="text-[11px] font-bold text-zinc-400 hover:text-amber-500 transition-all duration-300 uppercase tracking-[0.2em] font-['Montserrat']">About Osazee</a>
             </div>
 
             <!-- Right Side: CTA + Mobile Toggle -->
-            <div class="flex items-center gap-3 md:gap-6">
-                <!-- Primary CTA Button -->
-                <a href="#" class="inline-flex items-center justify-center px-5 py-2.5 md:px-7 md:py-3 text-[11px] md:text-xs font-black text-black bg-gradient-to-r from-amber-400 to-orange-500 rounded-full uppercase tracking-widest hover:scale-105 hover:shadow-[0_0_25px_rgba(245,158,11,0.4)] transition-all duration-300 whitespace-nowrap">
+            <div class="flex items-center gap-3 md:gap-5">
+                <!-- Primary CTA Button (Locked to same line as logo) -->
+                <a href="#" class="inline-flex items-center justify-center px-4 py-2.5 md:px-8 md:py-3.5 text-[10px] md:text-xs font-black text-black bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500 rounded-full uppercase tracking-widest hover:scale-105 hover:shadow-[0_0_30px_rgba(245,158,11,0.3)] transition-all duration-500 whitespace-nowrap font-['Montserrat']">
                     Get Blueprint
                 </a>
 
                 <!-- Hamburger Menu Icon (Checkbox Hack) -->
                 <div class="lg:hidden flex items-center">
-                    <label for="nav-menu-toggle" class="cursor-pointer text-zinc-400 hover:text-amber-500 transition-colors p-1">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <label for="nav-menu-toggle" class="cursor-pointer text-zinc-400 hover:text-amber-500 transition-colors p-2">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                         </svg>
                     </label>
@@ -59,11 +58,11 @@
 
     <!-- Mobile Menu Dropdown (Checkbox Hack) -->
     <input type="checkbox" id="nav-menu-toggle" class="hidden peer">
-    <div class="max-h-0 overflow-hidden peer-checked:max-h-[300px] lg:hidden absolute top-full left-0 w-full bg-zinc-950/95 border-b border-white/10 transition-all duration-500 ease-in-out">
-        <div class="px-6 py-10 space-y-8 flex flex-col items-center text-center">
-            <a href="#problem" class="block text-xl font-extrabold text-zinc-300 hover:text-amber-500 transition-colors uppercase tracking-widest">The Struggle</a>
-            <a href="#solution" class="block text-xl font-extrabold text-zinc-300 hover:text-amber-500 transition-colors uppercase tracking-widest">The Method</a>
-            <a href="#about" class="block text-xl font-extrabold text-zinc-300 hover:text-amber-500 transition-colors uppercase tracking-widest">About Osazee</a>
+    <div class="max-h-0 overflow-hidden peer-checked:max-h-[400px] lg:hidden absolute top-full left-0 w-full bg-zinc-950/98 backdrop-blur-2xl border-b border-white/10 transition-all duration-500 ease-in-out">
+        <div class="px-8 py-12 space-y-8 flex flex-col items-center text-center">
+            <a href="#problem" class="block text-lg font-black text-zinc-300 hover:text-amber-500 transition-colors uppercase tracking-[0.2em] font-['Montserrat']">The Struggle</a>
+            <a href="#solution" class="block text-lg font-black text-zinc-300 hover:text-amber-500 transition-colors uppercase tracking-[0.2em] font-['Montserrat']">The Method</a>
+            <a href="#about" class="block text-lg font-black text-zinc-300 hover:text-amber-500 transition-colors uppercase tracking-[0.2em] font-['Montserrat']">About Osazee</a>
         </div>
     </div>
 </nav>
